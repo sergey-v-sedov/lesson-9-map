@@ -20,6 +20,8 @@ public class Main {
             Character ch = Character.toUpperCase(str.charAt(i));
             if(ch.equals(' ')) continue;
 
+
+
             if(charsCount.containsKey(ch)) {
                 Integer count = charsCount.get(ch);
                 count++;
@@ -63,7 +65,7 @@ public class Main {
         while(keysIt.hasNext()) {
             String key = keysIt.next();
             UserProfile profile = users.get(key);
-            System.out.println(key + " -> " + profile);
+            System.out.println(key + " -> " + profile + " -(hash)-> " + profile.hashCode());
         }
 
         Collection<UserProfile> values = users.values();
